@@ -1,6 +1,10 @@
 class Solution {
 public:
     void f(int i, int target, vector<int>& v, vector<int>& c, vector<vector<int>>& res) {
+        if(target == 0) {
+            res.push_back(v);
+            return;
+        }
         if(i == c.size()) {
             if(target == 0)
                 res.push_back(v);
